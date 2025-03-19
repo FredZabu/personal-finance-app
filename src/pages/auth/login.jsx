@@ -23,7 +23,7 @@ function login() {
               <button type="submit" className='mt-5 text-white bg-black w-full p-2 rounded-lg'>Login</button>
             </form>
             <div className="mt-2.5 text-center">
-              <span className='text-[12px]'>Need to create an account ?</span> <Link to="/sign-up">Sign up</Link>
+              <span className='text-[12px] text-gray-500'>Need to create an account ?</span> <Link to="/sign-up" className='ml-2 capitalize text-sm underline'>Sign up</Link>
             </div>
           </div>
             
