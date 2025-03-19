@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AuthImage } from '../../components/index.js'
 
-function login() {
+function sign_up() {
   return (
-    <div className='lg:flex  w-[100vw] h-[100vh]'>
-      
+<div className='lg:flex  w-[100vw] h-[100vh]'>
+      <AuthImage />
       <div className='w-[100%] h-[100%] lg:w-[65%] grid place-items-center'>
         <div className='bg-white w-[50%] rounded-lg'>
           <div className='p-[4%]'>
-            <h1 className='font-h2 capitalize text-xl'>Login</h1>
+            <h1 className='font-h2 capitalize text-xl'>Sign Up</h1>
             <form action="" className='mt-[2%]'>
               <div>
                 <p className='text-[12px]'>Email</p>
@@ -29,9 +29,9 @@ function login() {
             
         </div>
       </div>
-      <AuthImage />
+      
     </div>
   )
 }
 
-export default login
+export default sign_up
