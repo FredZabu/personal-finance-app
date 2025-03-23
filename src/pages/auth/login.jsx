@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthImage } from '../../components/index.js'
 import { Eye, EyeOff } from 'lucide-react'
 
-function login() {
+function Login() {
   const [isVisible, setIsVisible] = useState(false)
+  const navigate = useNavigate()
   const handleVisibility = () => {
     setIsVisible(!isVisible)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/')
   }
   return (
     <div className='lg:flex  w-[100vw] h-[100vh]'>
@@ -15,7 +20,7 @@ function login() {
         <div className='bg-white w-[50%] rounded-lg'>
           <div className='p-[4%]'>
             <h1 className='font-h2 capitalize text-xl text-gray-900'>Login</h1>
-            <form action="" className='mt-[2%]'>
+            <form action="" onSubmit={handleSubmit} className='mt-[2%] '>
               <div>
                 <p className='text-[12px] text-gray-500'>Email</p>
                 <input className='invalid:border-1 invalid:border-red-800  border border-[#98908B] w-full p-1 rounded-md  focus:border-transparent focus:outline-1 focus:outline-sky-600 focus:invalid:outline-red-800 transition-all duration-200 ease-in-out focus:transition-all focus:duration-200 focus:ease-in-out' type="email" name="email" id="email" />
@@ -43,4 +48,4 @@ function login() {
   )
 }
 
-export default login
+export default Login
