@@ -6,7 +6,12 @@
   --color-main: #f8f4f0;
 }
 
-
+.icon-position{
+  position: absolute;
+  top:50%;
+  right:0px;
+  transform: translate(-50%, -50%);
+}
 .font-logo{
   font-family: "Public Sans", sans-serif;
   font-weight: 900;
