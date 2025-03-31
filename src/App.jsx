@@ -3,7 +3,7 @@ import { Login, SignUp } from "./pages/auth/index.js"
 import {Overview, Bills, Budget, Pots, Transaction} from "./pages/dashboard/index.js"
 function App() {
   return (
-    <div className="w-[100vw] h-[100vh] bg-main">
+    <div className="w-[100vw] h-[100vh] overflow-hidden bg-main">
       <Routes>
         {/* Authentication Routes */}
         <Route path="login" element={<Login />} />

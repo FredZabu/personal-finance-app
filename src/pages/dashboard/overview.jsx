@@ -1,5 +1,7 @@
 import React from 'react'
 import Dashboard_layout from './dashboard_layout'
+import { PotsCard } from '../../components'
+
 function Overview() {
   const ACCOUNT = [
     {
@@ -17,7 +19,7 @@ function Overview() {
   ]
   return (
     <Dashboard_layout title = "Overview">
-        <div className='border-2 h-[100%]'>
+        <div className=''>
           <div className='flex justify-between'>
           {ACCOUNT.map(({ name, value },index) => {
             return (
@@ -28,11 +30,12 @@ function Overview() {
               )
             })}
           </div>
-          <div className='border-2 h-[100%] mt-2.5'>
-            <div >
-              <h1>hell</h1>
+          <div className=' flex justify-between mt-5'>
+            <div className=' w-[59%]'>
+              <PotsCard />
             </div>
-            <div>
+            <div className=' w-[39%]'>
+              <h1>chart</h1>
               
             </div>
           </div>

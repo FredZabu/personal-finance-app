@@ -6,12 +6,12 @@ function Dashboard_layout({title,children}) {
       <div className='w-[15%] h-[100%] bg-[#201f24] rounded-br-2xl rounded-tr-2xl'>
         <SideNav />           
       </div>
-      <div className='w-[85%] p-[2%] border-2 border-red-800'>
-        <div className='border-2 border-yellow-500 w-full h-full'>
-          <div>
+      <div className='w-[85%] p-[2%] '>
+        <div className=' w-full h-full'>
+          <div className="h-[8%] ">
             <h1 className='font-h2 text-2xl'>{ title }</h1>
           </div>
-          <div className='mt-[2%] h-full border-2 border-green-900'>
+          <div className='h-[92%]  overflow-scroll'>
             {children}
           </div>
         </div>
