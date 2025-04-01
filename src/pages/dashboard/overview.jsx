@@ -1,6 +1,7 @@
 import React from 'react'
 import Dashboard_layout from './dashboard_layout'
-import { PotsCard } from '../../components'
+import { PotsCard, TransactionCard, BudgetCard, BillCard } from '../../components'
+import profile from "../../assets/images/avatars/daniel-carter.jpg"
 
 function Overview() {
   const ACCOUNT = [
@@ -15,6 +16,38 @@ function Overview() {
     {
       name: "Expenses",
       value: "$1,700.50"
+    }    
+  ]
+  const users = [
+    {
+      profile: profile,
+      name: "Asiimwe Fred",
+      totalTransaction: "$750",
+      date: "12/02/2024"
+    },
+    {
+      profile: profile,
+      name: "Mumbere John",
+      totalTransaction: "$750",
+      date: "12/02/2024"
+    },
+    {
+      profile: profile,
+      name: "Kasolo emma",
+      totalTransaction: "$750",
+      date: "12/02/2024"
+    },
+    {
+      profile: profile,
+      name: "Aculera Ronnie",
+      totalTransaction: "$750",
+      date: "12/02/2024"
+    },
+    {
+      profile: profile,
+      name: "Basemera Sharon",
+      totalTransaction: "$750",
+      date: "12/02/2024"
     }    
   ]
   return (
@@ -33,10 +66,15 @@ function Overview() {
           <div className=' flex justify-between mt-5'>
             <div className=' w-[59%]'>
               <PotsCard />
+              <div className='mt-2.5'>
+                <TransactionCard data = {users}  />
+              </div>
             </div>
             <div className=' w-[39%]'>
-              <h1>chart</h1>
-              
+              <BudgetCard />
+              <div className='mt-2.5'>
+                <BillCard data = {users}  />
+              </div>              
             </div>
           </div>
         </div>
